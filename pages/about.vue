@@ -1,13 +1,11 @@
 <template>
- <div class="box">
-   <h1>Home page</h1>
- </div>
+  <AboutTemplate />
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'ibook'
+    layout:'ibook'
 })
 </script>
