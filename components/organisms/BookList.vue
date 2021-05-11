@@ -27,7 +27,6 @@ export default Vue.extend({
   grid-gap: 2rem;
   @include screen('small') {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
   }
   @include screen('medium') {
     grid-template-columns: repeat(3, 1fr);

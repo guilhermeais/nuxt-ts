@@ -11,6 +11,7 @@
   grid-template-columns: 250px 1fr;
   grid-gap: 1.4rem;
   @include screen('small', 'medium') {
+    max-width: 100%;
     grid-template-columns: 1fr;
   }
 }
