@@ -2,7 +2,8 @@
   <footer class="footer">
     <Container>
       <Logo />
-      <p>Copyright &copy; {{currentYear}} iBook</p>
+      <p>Copyright &copy; {{ currentYear }} iBook</p>
+  
     </Container>
   </footer>
 </template>
@@ -11,11 +12,11 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-    computed:{
-        currentYear(){
-            return new Date().getFullYear()
-        }
-    }
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
+    },
+  },
 })
 </script>
 
