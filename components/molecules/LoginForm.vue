@@ -1,14 +1,15 @@
 <template>
-  <div class="login-form">
+  <form @submit.prevent="login()" class="login-form">
     <input type="email" placeholder="E-mail" v-model="form.email" />
     <input type="password" placeholder="Senha" v-model="form.password" />
     <button type="submit" @click="login()">Entrar</button>
-  </div>
+    <button type="submit" @click="client()">Ver Livros</button>
+  </form>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import {auth} from '@/store'
+import { auth } from '@/store'
 
 export default Vue.extend({
   data() {
@@ -19,17 +20,19 @@ export default Vue.extend({
       },
     }
   },
-  methods:{
-    async login(){
+  methods: {
+    async login() {
       try {
         await auth.create(this.form)
-        this.$router.push('/home')
+        this.$router.push('/dashboard')
       } catch (error) {
         console.log(error)
       }
-      
-    }
-  }
+    },
+    async client() {
+      this.$router.push('/')
+    },
+  },
 })
 </script>
 

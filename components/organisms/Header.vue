@@ -13,6 +13,9 @@
         <li class="item">
           <NuxtLink to="/about">Sobre</NuxtLink>
         </li>
+        <li class="item">
+          <NuxtLink to="/dashboard">Dashboard</NuxtLink>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,7 +35,7 @@
     align-items: center;
     .items {
       display: grid;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(4, auto);
       align-items: center;
       justify-content: space-around;
       height: 100%;

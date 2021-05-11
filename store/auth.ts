@@ -15,13 +15,12 @@ export default class Auth extends VuexModule {
   @Mutation
   private UPDATE_TOKEN(token: Token) {
     this.token = token
-    console.log(token)
   }
 
   @Action
   async create({ email, password }: Login) {
     const { accessToken } = await $axios.$post('/login', { email, password }) // pegamos o token de acesso recebido
-
+    
     $cookies.set('token', accessToken, {
       // geramos o cookie que armazena o token
       path: '/',
