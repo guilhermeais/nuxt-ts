@@ -3,7 +3,6 @@
     <Container>
       <Logo />
       <p>Copyright &copy; {{ currentYear }} iBook</p>
-  
     </Container>
   </footer>
 </template>
